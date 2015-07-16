@@ -16,7 +16,7 @@
 @posadka: #4dad18;
 
 body {
-  font: 48px/64px 'Humanist521BTWebRoman';
+  font: 2.5vw 'Humanist521BTWebRoman';
 }
 
 .wrapper {
@@ -35,7 +35,7 @@ body {
   color:white;
   align-items: center;
   padding: 20px 30px;
-  font-size:72px;
+  font-size:4vw;
 
   &__title {
     flex-grow: 1;
@@ -49,23 +49,23 @@ body {
 .explain {
   background-color: #70172f;
   color:white;
-  font-size:30px;
+  font-size:1.5vw;
   align-items: center;
-  padding: 10px 30px;
+  padding: 15px 30px;
 }
 
 .timetable {
   background-color:white;
   color:black;
   flex-grow: 1;
-  font-size:48px;
   flex-direction: column;
   padding: 0;
 
   &__row {
     display: flex;
-    flex: 0 1 90px;
+    flex: 0 1 85px;
     padding: 30px;
+		align-items: center;
 
     &:nth-child(2n) {
       background-color:#f2f2f2;
@@ -75,7 +75,11 @@ body {
 
 .current__row {
   background-color:@maincolor;
-  color:white;
+  color:white!important;
+}
+
+.current__row .opozdal {
+  color:white!important;
 }
 
 .posadka {
@@ -90,10 +94,19 @@ body {
   background-color:black;
   color:white;
   padding: 30px;
+	align-items: center;
 
   &__current_time {
-    margin:0 1%;
+    margin:0 2.5%;
   }
+
+	&__clock {
+		display:flex;
+	}
+
+	&__day {
+		margin-right: 10px;
+	}
 }
 
 .header__explain_icon, .explain__flight, .timetable__flight {
@@ -101,7 +114,7 @@ body {
 }
 
 .explain__time, .timetable__time {
-  flex-basis:11%;
+  flex-basis:10%;
 }
 
 .explain__airport, .timetable__airport {
@@ -114,6 +127,16 @@ body {
   margin-right: 3%;
 }
 
-.header__air_kidzania, .explain__remarks, .timetable__remarks {
-  flex-basis:20%;
+.explain__remarks, .timetable__remarks {
+  flex-basis:22%;
+}
+
+
+.blink {
+  animation: blink 2s steps(2, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }
