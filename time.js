@@ -2,6 +2,8 @@ function formatNum(num) {
     return ('00' + num).slice(-2);
 }
 
+
+
 setInterval(function() {
     var event = new CustomEvent('time', {
         detail: new Date()
@@ -14,7 +16,7 @@ setInterval(function() {
     document.getElementById("current_hour").innerHTML = formatNum(date.getHours());
     document.getElementById("current_minute").innerHTML = formatNum(date.getMinutes());
 
-    row(date, 'santafe_calling', 11, 0, 11, 30);
+    row(date, 'santafe_calling', 0, 3, 11, 30);
     row(date, 'tokio_calling', 11, 15, 11, 45);
     row(date, 'moscow_calling', 11, 30, 12, 0);
     row(date, 'london_calling', 12, 0, 12, 30);
