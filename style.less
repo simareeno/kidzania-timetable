@@ -1,0 +1,119 @@
+// out: style.css, compress: true
+
+@font-face {
+	font-family: 'Humanist521BTWebRoman';
+	src: url('font/HMN55__W.eot');
+	src:
+	     url('font/HMN55__W.eot?#iefix') format('embedded-opentype'),
+	     url('font/HMN55__W.woff') format('woff'),
+	     url('font/HMN55__W.ttf') format('truetype'),
+	     url('font/HMN55__W.svg#Humanist521BTWeb-Roman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@maincolor: #bd234d;
+@posadka: #4dad18;
+
+body {
+  font: 48px/64px 'Humanist521BTWebRoman';
+}
+
+.wrapper {
+  display:flex;
+  height:100vh;
+  flex-direction: column;
+}
+
+.flex {
+  display:flex;
+  padding: 0 30px;
+}
+
+.header {
+  background-color:@maincolor;
+  color:white;
+  align-items: center;
+  padding: 20px 30px;
+  font-size:72px;
+
+  &__title {
+    flex-grow: 1;
+  }
+
+  &__explain_icon {
+    padding: 20px 0;
+  }
+}
+
+.explain {
+  background-color: #70172f;
+  color:white;
+  font-size:30px;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.timetable {
+  background-color:white;
+  color:black;
+  flex-grow: 1;
+  font-size:48px;
+  flex-direction: column;
+  padding: 0;
+
+  &__row {
+    display: flex;
+    flex: 0 1 90px;
+    padding: 30px;
+
+    &:nth-child(2n) {
+      background-color:#f2f2f2;
+    }
+  }
+}
+
+.current__row {
+  background-color:@maincolor;
+  color:white;
+}
+
+.posadka {
+  color:@posadka;
+}
+
+.opozdal {
+  color:@maincolor;
+}
+
+.time {
+  background-color:black;
+  color:white;
+  padding: 30px;
+
+  &__current_time {
+    margin:0 1%;
+  }
+}
+
+.header__explain_icon, .explain__flight, .timetable__flight {
+  flex-basis:11%;
+}
+
+.explain__time, .timetable__time {
+  flex-basis:11%;
+}
+
+.explain__airport, .timetable__airport {
+  flex-grow:1;
+  margin-left: 3%;
+}
+
+.explain__gate, .timetable__gate {
+  flex-basis:11%;
+  margin-right: 3%;
+}
+
+.header__air_kidzania, .explain__remarks, .timetable__remarks {
+  flex-basis:20%;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kidzania Timetable</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="normalize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="time.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+
+  <div class="header flex">
+    <div class="header__explain_icon"><img src="img/flight.png" alt=""></div>
+    <div class="header__title">Выход на посадку Go to gate</div>
+    <div class="header__air_kidzania"><img src="img/airkidzania.png" alt=""></div>
+  </div>
+
+  <div class="explain flex">
+    <div class="explain__flight">Рейс Flight</div>
+    <div class="explain__time">Время Time</div>
+    <div class="explain__airport">Аэропорт Airport</div>
+    <div class="explain__gate">Выход Gate</div>
+    <div class="explain__remarks">Примечание Remarks</div>
+  </div>
+
+  <div class="timetable flex">
+    <div class="timetable__row">
+      <div class="timetable__flight">R0599</div>
+      <div class="timetable__time">11:30</div>
+      <div class="timetable__airport">Кидзания Санта-Фе</div>
+      <div class="timetable__gate">1А</div>
+      <div class="timetable__remarks opozdal">Посадка завершена</div>
+    </div>
+    <div class="timetable__row">
+      <div class="timetable__flight">U9321</div>
+      <div class="timetable__time">11:45</div>
+      <div class="timetable__airport">Кидзания Токио</div>
+      <div class="timetable__gate">3</div>
+      <div class="timetable__remarks posadka">Посадка</div>
+    </div>
+    <div class="timetable__row current__row">
+      <div class="timetable__flight">S1115</div>
+      <div class="timetable__time">12:00</div>
+      <div class="timetable__airport">Кидзания Москва</div>
+      <div class="timetable__gate">21А</div>
+      <div class="timetable__remarks" id="moscow_calling">Пройдите к выходу</div>
+    </div>
+    <div class="timetable__row">
+      <div class="timetable__flight">S9321</div>
+      <div class="timetable__time">12:30</div>
+      <div class="timetable__airport">Кидзания Лондон</div>
+      <div class="timetable__gate">19</div>
+      <div class="timetable__remarks">Пройдите к выходу</div>
+    </div>
+    <div class="timetable__row">
+      <div class="timetable__flight">I0599</div>
+      <div class="timetable__time">13:00</div>
+      <div class="timetable__airport">Кидзания Дубаи</div>
+      <div class="timetable__gate">7А</div>
+      <div class="timetable__remarks">Пройдите к выходу</div>
+    </div>
+    <div class="timetable__row">
+      <div class="timetable__flight">A9321</div>
+      <div class="timetable__time">13:10</div>
+      <div class="timetable__airport">Кидзания Сеул</div>
+      <div class="timetable__gate">8</div>
+      <div class="timetable__remarks">Пройдите к выходу</div>
+    </div>
+    <div class="timetable__row">
+      <div class="timetable__flight">P0599</div>
+      <div class="timetable__time">13:10</div>
+      <div class="timetable__airport">Кидзания Стамбул</div>
+      <div class="timetable__gate">16</div>
+      <div class="timetable__remarks">Пройдите к выходу</div>
+    </div>
+    <div class="timetable__row">
+      <div class="timetable__flight">U9321</div>
+      <div class="timetable__time">13:20</div>
+      <div class="timetable__airport">Кидзания Лиссабон</div>
+      <div class="timetable__gate">6</div>
+      <div class="timetable__remarks">Пройдите к выходу</div>
+    </div>
+  </div>
+
+  <div class="time flex">
+    <div class="time__clock"><img src="img/clock.png" alt="" /></div>
+    <div class="time__current_time"><span id="current_hour"></span>:<span id="current_minute"></span></div>
+    <div class="time__day">Пятница,</div>
+    <div class="time__date">17 июля</div>
+  </div>
+
+  </div>
+
+</body>
+</html>
